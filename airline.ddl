@@ -59,7 +59,7 @@ FOREIGN KEY(AirplaneTypeName) REFERENCES AirplaneType(AirplaneTypeName) ON DELET
 );
 
 CREATE TABLE FlightDays(
-FlightDayOffered DATE NOT NULL,
+FlightDayOffered VARCHAR(10) NOT NULL,
 FlightNumber CHAR(3) NOT NULL,
 AirlineCode CHAR(2) NOT NULL,
 PRIMARY KEY(FlightDayOffered, AirlineCode, FlightNumber),
@@ -103,7 +103,7 @@ insert into Handles values
 ;
 
 insert into FlightDays values
-('1966-04-05', '696', 'AC'),
-('1999-22-29', '696', 'AC'),
-('1963-10-25', '293', 'AG')
+('Monday', '696', 'AC'),
+('Tuesday', '696', 'AC'),
+('Wednesday', '293', 'AG')
 ;
