@@ -47,11 +47,11 @@
 
                 if(empty($code)) {
                     echo <<<EOD
-                        <input id="search" class="search-text" type="text" name="airline_code" placeholder="Enter code">
+                        <input id="search" class="search-text" type="text" name="airlinecode" placeholder="Enter code">
                     EOD;
                 } else {
                     echo <<<EOD
-                        <input id="search" class="search-text" type="text" name="airline_code" value="$code">
+                        <input id="search" class="search-text" type="text" name="airlinecode" value="$code">
                     EOD;
                 }
             ?>
