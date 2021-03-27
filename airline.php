@@ -7,7 +7,8 @@
   <meta charset="utf-8">
   <title>Airline Assignment</title>
   <!-- Custom stylesheet -->
-  <link rel="stylesheet" href="css/side_bar.css">
+  <link rel="stylesheet" href="style/airline.css">
+  <link rel="stylesheet" href="style/side_bar.css">
 </head>
 
 <!-- Page content -->
@@ -21,8 +22,9 @@
     <a href="#">Get average flight seats</a>
   </div>
 
-  <?php include 'connectdb.php';?>
   <div class="main_view">
+    <?php include 'connectdb.php';?>
+
     <h1>Airline Assignment</h1>
     <h2>Available Flights</h2>
     <table id="data">
