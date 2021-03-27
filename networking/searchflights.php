@@ -11,6 +11,8 @@ echo "<h4>";
                 Flight.FlightNumber AS FlightNumber
             FROM
                 Flight
+            WHERE
+              Flight.AirlineCode="$code"
         EOD);
             $result_fetched = $result->fetch();
             if (empty($result_fetched)) {
