@@ -8,6 +8,16 @@
   <title>Airline Assignment</title>
 </head>
 
+<!-- Side navigation -->
+<div class="sidenav">
+  <a href="#">Home</a>
+  <a href="#">Search flights</a>
+  <a href="#">Create flight</a>
+  <a href="#">Update flight</a>
+  <a href="#">Get average flight seats</a>
+</div>
+
+<!-- Page content -->
 <body>
   <?php include 'connectdb.php';?>
   <div class="main_view">
@@ -19,8 +29,6 @@
                 <th>Flight Code |</th>
                 <th>Scheduled Arrival Time |</th>
                 <th>Actual Arrival Time</th>
-
-
       </tr>
       <?php include 'getflights.php';?>
   </div>
