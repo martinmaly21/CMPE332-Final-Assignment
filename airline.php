@@ -15,6 +15,9 @@
 <body>
   <!-- Side navigation -->
   <div class="sidenav">
+    <div class="image-holder">
+    <img src="img/paper_airplane.png" alt="Airplane Assignment" width="150" height="150"">
+    </div>
     <a href="#">Home</a>
     <a href="#">Search flights</a>
     <a href="#">Create flight</a>
