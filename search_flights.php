@@ -7,6 +7,7 @@
   <meta charset="utf-8">
   <title>Search Flights</title>
   <!-- Custom stylesheet -->
+  <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/side_bar.css">
 </head>
 
@@ -32,6 +33,11 @@
       <h1>Get Average Flight Seats</h1>
   </a>
 </div>
+
+  <div class="main_view">
+  <h1>Search Flights</h1>
+
+  </div>
 
 </body>
 

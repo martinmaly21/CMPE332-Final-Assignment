@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <title>Home</title>
   <!-- Custom stylesheet -->
-  <link rel="stylesheet" href="css/airline.css">
+  <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/side_bar.css">
 </head>
 
@@ -38,8 +38,8 @@
   <div class="main_view">
     <?php include 'connectdb.php';?>
 
-    <h1>Airline Assignment</h1>
-    <h2>Available Flights</h2>
+    <h1>Available Flights</h1>
+
     <table id="airlinedata">
       <tr>
                 <th>Airline |</th>
