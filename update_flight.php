@@ -14,7 +14,7 @@
 <!-- Side navigation -->
 <div class="sidenav">
   <a class="image-holder", href= "airline.php">
-    <img src="img/paper_airplane.png" alt="Airplane Assignment" width="150" height="150">
+    <img src="images/paper_airplane.png" alt="Airplane Assignment" width="150" height="150">
   </a>
   <a class="sidenav_element" href="airline.php">
       <h1>Home</h1>

@@ -16,7 +16,7 @@
   <!-- Side navigation -->
 <div class="sidenav">
     <a class="image-holder", href= "airline.php">
-      <img src="img/paper_airplane.png" alt="Airplane Assignment" width="150" height="150">
+      <img src="images/paper_airplane.png" alt="Airplane Assignment" width="150" height="150">
     </a>
     <a class="sidenav_element" href="airline.php">
         <h1>Home</h1>
@@ -36,7 +36,7 @@
 </div>
 
   <div class="main_view">
-    <?php include 'connectdb.php';?>
+    <?php include 'networking/connectdb.php';?>
 
     <h1>Available Flights</h1>
 
@@ -47,7 +47,7 @@
                 <th>Scheduled Arrival Time |</th>
                 <th>Actual Arrival Time</th>
       </tr>
-      <?php include 'getflights.php';?>
+      <?php include 'networking/getflights.php';?>
   </div>
 </body>
 
