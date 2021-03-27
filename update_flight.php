@@ -23,7 +23,7 @@
       <h1>Search Flights</h1>
   </a>
   <a class="sidenav_element" href="create_flight.php">
-      <h1>Create flight</h1>
+      <h1>Create Flight</h1>
   </a>
   <a class="sidenav_element" href="update_flight.php">
       <h1>Update Flight</h1>
