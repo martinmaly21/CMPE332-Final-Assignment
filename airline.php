@@ -5,7 +5,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Airline Assignment</title>
+  <title>Home</title>
   <!-- Custom stylesheet -->
   <link rel="stylesheet" href="css/airline.css">
   <link rel="stylesheet" href="css/side_bar.css">
@@ -24,13 +24,13 @@
     <a class="sidenav_element" href="search_flights.php">
         <h1>Search Flights</h1>
     </a>
-    <a class="sidenav_element" href="add_flight.php">
-        <h1>Create flight</h1>
+    <a class="sidenav_element" href="create_flight.php">
+        <h1>Create Flight</h1>
     </a>
     <a class="sidenav_element" href="update_flight.php">
         <h1>Update Flight</h1>
     </a>
-    <a class="sidenav_element" href="average_seats.php">
+    <a class="sidenav_element" href="get_average_flight_seats.php">
         <h1>Get Average Flight Seats</h1>
     </a>
 </div>
