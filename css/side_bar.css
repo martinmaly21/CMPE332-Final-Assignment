@@ -30,11 +30,11 @@
   .sidenav a {font-size: 18px;}
 }
 
-div.image-holder {
+.image-holder {
   width: min-content + 20px;
 }
 
-div.image-holder {
+.image-holder {
   background-color: #696969;
 }
 
