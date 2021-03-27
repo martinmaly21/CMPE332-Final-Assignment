@@ -19,6 +19,8 @@
                 <th>Flight Code |</th>
                 <th>Scheduled Arrival Time |</th>
                 <th>Actual Arrival Time</th>
+
+
       </tr>
       <?php include 'getflights.php';?>
   </div>
