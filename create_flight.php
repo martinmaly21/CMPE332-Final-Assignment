@@ -64,6 +64,14 @@
         <?php include 'networking/selectarrivalairport.php';?>
       </div>
 
+      <div class="jc_space_between display_flex">
+                      <h2 style="font-size: 2em;">Schedule your arrival time</h2>
+                      <?php include 'networking/schedulearrivaltime.php';?>
+                      <h2 style="font-size: 2em;">Schedule your departure time</h2>
+                      <?php include 'networking/scheduledeparturetime.php';?>
+                  </div>
+
+
     </form>
 
   </div>
