@@ -38,6 +38,11 @@
   <?php include 'networking/connectdb.php';?>
 
   <h1>Create Flights</h1>
+    <form action="create_flight.php" class="create_flight" id="create_flight">
+      <div class="spacer_between">
+        <?php include 'networking/addflight.php';?>
+      </div>
+    </form>
 
   </div>
 
