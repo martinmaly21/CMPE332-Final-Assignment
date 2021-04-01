@@ -16,6 +16,7 @@ $savedAirport = $_GET["departureAirport"];
                 <label for="$airportCode" >$airportName ($airportCode)</label><br>
             EOD;
             }
+            $airportCount++;
           }
 if ($airportCount == 0) {
     echo "No Airports Available - you cannot create a flight";
