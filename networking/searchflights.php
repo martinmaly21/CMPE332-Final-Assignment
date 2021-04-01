@@ -8,12 +8,17 @@ echo "<h4>";
             $result = $connection->query(<<<EOD
             SELECT
                 Flight.AirlineCode AS AirlineCode,
-                Flight.FlightNumber AS FlightNumber
+                Flight.FlightNumber AS FlightNumber,
+                ArrivalAirport.AirportName AS ArrivalAirportName,
+                DepartureAirport.AirportName AS DepartureAirportName
             FROM
                 Flight
             JOIN
               FlightDays ON Flight.AirlineCode = FlightDays.AirlineCode
-
+            JOIN
+              Airport AS ArrivalAirport ON Flight.ArrivalAirportCode = ArrivalAirport.AirportCode
+            JOIN
+              Airport AS DepartureAirport ON Flight.DepartureAirportCode = DepartureAirport.AirportCode
             WHERE
               Flight.AirlineCode="$code" AND FlightDays.FlightDayOffered="$day"
         EOD);
@@ -31,13 +36,15 @@ echo "<h4>";
                 echo "<tr>";
                 echo "<td>" . $result_fetched["AirlineCode"] . "</td>";
                 echo "<td>". $result_fetched["FlightNumber"]."</td>";
-                echo "<td>". $result_fetched["FlightDay"]."</td>";
+                echo "<td>". $result_fetched["ArrivalAirportName"]."</td>";
+                echo "<td>". $result_fetched["DepartureAirportName"]."</td>";
                 echo "</tr>";
                 while ($row = $result->fetch()) {
                     echo "<tr>";
                     echo "<td>" . $row["AirlineCode"] . "</td>";
                     echo "<td>". $row["FlightNumber"]."</td>";
-                    echo "<td>". $row["FlightDay"]."</td>";
+                    echo "<td>". $row["ArrivalAirportName"]."</td>";
+                    echo "<td>". $result_fetched["DepartureAirportName"]."</td>";
                     echo "</tr>";
                 }
                 echo "</table>";

@@ -104,6 +104,6 @@ insert into Handles values
 
 insert into FlightDays values
 ('Monday', '696', 'AC'),
-('Tuesday', '696', 'AC'),
+('Tuesday', '473', 'AC'),
 ('Wednesday', '293', 'AG')
 ;
