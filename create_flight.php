@@ -48,7 +48,7 @@
         <button type="submit" class="search-submit add_flight_select_airline" class="btn btn-success" method="get">
                     <img src="./img/right_arrow.png" class="add_flight_arrow"/>
                     <br/>
-                    Select Airline
+                    Select Airline to see available airplanes.
                 </button>
       </div>
       <div class="spacer_between">
