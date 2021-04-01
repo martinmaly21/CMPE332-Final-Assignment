@@ -55,6 +55,12 @@
         <h2>Select an Airplane</h2>
         <?php include 'networking/selectairplane.php';?>
       </div>
+      <div class="spacer_between">
+        <h2>Select your departure airport</h2>
+        <?php include 'networking/selectdepartureairport.php';?>
+
+      </div>
+
     </form>
 
   </div>
