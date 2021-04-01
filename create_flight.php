@@ -45,11 +45,10 @@
       <div class="spacer_between">
         <h2>Select an airline</h2>
         <?php include 'networking/selectairline.php';?>
-        <button type="submit" class="search-submit add_flight_select_airline" class="btn btn-success" method="get">
-            <img src="./img/right_arrow.png" class="add_flight_arrow"/>
-            <br/>
-            Select Airline
-        </button>
+      </div>
+      <div class="spacer_between">
+        <h2>Select an Airplane</h2>
+        <?php include 'networking/selectairplane.php';?>
       </div>
     </form>
 
