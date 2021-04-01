@@ -9,8 +9,8 @@ echo "<h4>";
             SELECT
                 Flight.AirlineCode AS AirlineCode,
                 Flight.FlightNumber AS FlightNumber,
-                ArrivalAirport.AirportName AS ArrivalAirportName,
-                DepartureAirport.AirportName AS DepartureAirportName
+                ArrivalAirport.AirportCity AS ArrivalAirportCity,
+                DepartureAirport.AirportCity AS DepartureAirportCity
             FROM
                 Flight
             JOIN
@@ -36,15 +36,15 @@ echo "<h4>";
                 echo "<tr>";
                 echo "<td>" . $result_fetched["AirlineCode"] . "</td>";
                 echo "<td>". $result_fetched["FlightNumber"]."</td>";
-                echo "<td>". $result_fetched["DepartureAirportName"]."</td>";
-                echo "<td>". $result_fetched["ArrivalAirportName"]."</td>";
+                echo "<td>". $result_fetched["DepartureAirportCity"]."</td>";
+                echo "<td>". $result_fetched["ArrivalAirportCity"]."</td>";
                 echo "</tr>";
                 while ($row = $result->fetch()) {
                     echo "<tr>";
                     echo "<td>" . $row["AirlineCode"] . "</td>";
                     echo "<td>". $row["FlightNumber"]."</td>";
-                    echo "<td>". $result_fetched["DepartureAirportName"]."</td>";
-                    echo "<td>". $row["ArrivalAirportName"]."</td>";
+                    echo "<td>". $row["DepartureAirportCity"]."</td>";
+                    echo "<td>". $row["ArrivalAirportCity"]."</td>";
                     echo "</tr>";
                 }
                 echo "</table>";
