@@ -73,7 +73,6 @@
       <div class="spacer_between">
         <h2>Choose the day(s) you'd like to depart</h2>
         <?php include 'networking/selectdays.php';?>
-        <h2>Choose the day(s) you'd like to depart</h2>
       </div>
 
       <div class="spacer_between">

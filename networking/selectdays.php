@@ -11,6 +11,7 @@ $days = $_GET["DaysOffered"];
           <label for="Monday">Monday</label><br>
           EOD;
     }
+
     if (empty($days) || !in_array("Tuesday", $days)) {
           echo <<<EOD
           <input type="checkbox" id="Tuesday" name="DaysOffered[]" value="Tuesday">
@@ -22,6 +23,7 @@ $days = $_GET["DaysOffered"];
           <label for="Tuesday">Tuesday</label><br>
           EOD;
     }
+
     if (empty($days) || !in_array("Wednesday", $days)) {
             echo <<<EOD
             <input type="checkbox" id="Wednesday" name="DaysOffered[]" value="Wednesday">
@@ -33,7 +35,7 @@ $days = $_GET["DaysOffered"];
             <label for="Wednesday">Wednesday</label><br>
             EOD;
       }
-            if (empty($days) || !in_array("Thursday", $days)) {
+      if (empty($days) || !in_array("Thursday", $days)) {
               echo <<<EOD
               <input type="checkbox" id="Thursday" name="DaysOffered[]" value="Thursday">
               <label for="Thursday">Thursday</label><br>
@@ -44,37 +46,38 @@ $days = $_GET["DaysOffered"];
               <label for="Thursday">Thursday</label><br>
               EOD;
         }
-            if (empty($days) || !in_array("Friday", $days)) {
+        if (empty($days) || !in_array("Friday", $days)) {
+            echo <<<EOD
+            <input type="checkbox" id="Friday" name="DaysOffered[]" value="Friday">
+            <label for="Friday">Friday</label><br>
+            EOD;
+         } else {
+             echo <<<EOD
+             <input type="checkbox" id="Friday" name="DaysOffered[]" value="Friday" CHECKED>
+             <label for="Friday">Friday</label><br>
+             EOD;
+          }
+
+          if (empty($days) || !in_array("Saturday", $days)) {
+              echo <<<EOD
+              <input type="checkbox" id="Saturday" name="DaysOffered[]" value="Saturday">
+              <label for="Saturday">Saturday</label><br>
+              EOD;
+           } else {
+               echo <<<EOD
+               <input type="checkbox" id="Saturday" name="DaysOffered[]" value="Saturday" CHECKED>
+               <label for="Saturday">Saturday</label><br>
+               EOD;
+            }
+
+            if (empty($days) || !in_array("Sunday", $days)) {
                 echo <<<EOD
-                <input type="checkbox" id="Friday" name="DaysOffered[]" value="Friday">
-                <label for="Friday">Friday</label><br>
+                <input type="checkbox" id="Sunday" name="DaysOffered[]" value="Sunday">
+                <label for="Sunday">Sunday</label><br>
                 EOD;
              } else {
                  echo <<<EOD
-                 <input type="checkbox" id="Friday" name="DaysOffered[]" value="Friday" CHECKED>
-                 <label for="Friday">Friday</label><br>
+                 <input type="checkbox" id="Sunday" name="DaysOffered[]" value="Sunday" CHECKED>
+                 <label for="Sunday">Sunday</label><br>
                  EOD;
-              }
-
-              if (empty($days) || !in_array("Saturday", $days)) {
-                  echo <<<EOD
-                  <input type="checkbox" id="Saturday" name="DaysOffered[]" value="Saturday">
-                  <label for="Saturday">Saturday</label><br>
-                  EOD;
-              } else {
-                  echo <<<EOD
-                  <input type="checkbox" id="Saturday" name="DaysOffered[]" value="Saturday" CHECKED>
-                  <label for="Saturday">Saturday</label><br>
-                   EOD;
-              }
-              if (empty($days) || !in_array("Sunday", $days)) {
-                    echo <<<EOD
-                      <input type="checkbox" id="Sunday" name="DaysOffered[]" value="Sunday">
-                      <label for="Sunday">Sunday</label><br>
-                        EOD;
-              } else {
-                    echo <<<EOD
-                    <input type="checkbox" id="Sunday" name="DaysOffered[]" value="Sunday" CHECKED>
-                    <label for="Sunday">Sunday</label><br>
-                    EOD;
               }
