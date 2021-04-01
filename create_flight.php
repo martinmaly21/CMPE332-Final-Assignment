@@ -73,7 +73,19 @@
       <div class="spacer_between">
         <h2>Choose the day(s) you'd like to depart</h2>
         <?php include 'networking/selectdays.php';?>
+        <h2>Choose the day(s) you'd like to depart</h2>
       </div>
+
+      <div class="spacer_between">
+        <div style="width: 30vw;" class="display_flex jc_space_between">
+           <h2>Enter a flight number:</h2>
+           <input id="search" class="add_flight_code" type="text" name="flight_number" placeholder="Type here">
+       </div>
+          <button type="submit" class="search-submit add_flight_submit" class="btn btn-success" method="get">
+              Create Flight
+          </button>
+      </div>
+
     </form>
 
   </div>
