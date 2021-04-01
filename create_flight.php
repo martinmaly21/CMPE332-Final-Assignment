@@ -64,14 +64,16 @@
         <?php include 'networking/selectarrivalairport.php';?>
       </div>
 
-      <div class="jc_space_between display_flex">
-                      <h2 style="font-size: 2em;">Schedule your arrival time</h2>
-                      <?php include 'networking/schedulearrivaltime.php';?>
-                      <h2 style="font-size: 2em;">Schedule your departure time</h2>
-                      <?php include 'networking/scheduledeparturetime.php';?>
-                  </div>
-
-
+      <div class="spacer_between">
+            <h2>Schedule your arrival time</h2>
+            <?php include 'networking/schedulearrivaltime.php';?>
+            <h2>Schedule your departure time</h2>
+            <?php include 'networking/scheduleddeparturetime.php';?>
+      </div>
+      <div class="spacer_between">
+        <h2>Choose the day(s) you'd like to depart</h2>
+        <?php include 'networking/selectdays.php';?>
+      </div>
     </form>
 
   </div>
