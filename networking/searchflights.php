@@ -14,7 +14,7 @@ echo "<h4>";
             FROM
                 Flight
             JOIN
-              FlightDays ON Flight.AirlineCode = FlightDays.AirlineCode
+              FlightDays ON Flight.AirlineCode = FlightDays.AirlineCode AND Flight.FlightNumber = FlightDays.FlightNumber
             JOIN
               Airport AS ArrivalAirport ON Flight.ArrivalAirportCode = ArrivalAirport.AirportCode
             JOIN
