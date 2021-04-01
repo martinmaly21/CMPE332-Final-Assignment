@@ -11,8 +11,11 @@ echo "<h4>";
                 Flight.FlightNumber AS FlightNumber
             FROM
                 Flight
+            JOIN
+              FlightDays ON Flight.AirlineCode = FlightDays.AirlineCode
+
             WHERE
-              Flight.AirlineCode="$code"
+              Flight.AirlineCode="$code" AND FlightDays.FlightDayOffered="$day"
         EOD);
             $result_fetched = $result->fetch();
             if (empty($result_fetched)) {
@@ -28,11 +31,13 @@ echo "<h4>";
                 echo "<tr>";
                 echo "<td>" . $result_fetched["AirlineCode"] . "</td>";
                 echo "<td>". $result_fetched["FlightNumber"]."</td>";
+                echo "<td>". $result_fetched["FlightDay"]."</td>";
                 echo "</tr>";
                 while ($row = $result->fetch()) {
                     echo "<tr>";
                     echo "<td>" . $row["AirlineCode"] . "</td>";
                     echo "<td>". $row["FlightNumber"]."</td>";
+                    echo "<td>". $row["FlightDay"]."</td>";
                     echo "</tr>";
                 }
                 echo "</table>";
