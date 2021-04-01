@@ -36,15 +36,15 @@ echo "<h4>";
                 echo "<tr>";
                 echo "<td>" . $result_fetched["AirlineCode"] . "</td>";
                 echo "<td>". $result_fetched["FlightNumber"]."</td>";
-                echo "<td>". $result_fetched["ArrivalAirportName"]."</td>";
                 echo "<td>". $result_fetched["DepartureAirportName"]."</td>";
+                echo "<td>". $result_fetched["ArrivalAirportName"]."</td>";
                 echo "</tr>";
                 while ($row = $result->fetch()) {
                     echo "<tr>";
                     echo "<td>" . $row["AirlineCode"] . "</td>";
                     echo "<td>". $row["FlightNumber"]."</td>";
-                    echo "<td>". $row["ArrivalAirportName"]."</td>";
                     echo "<td>". $result_fetched["DepartureAirportName"]."</td>";
+                    echo "<td>". $row["ArrivalAirportName"]."</td>";
                     echo "</tr>";
                 }
                 echo "</table>";
