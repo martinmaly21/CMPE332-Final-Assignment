@@ -40,7 +40,7 @@
 
   <?php include 'networking/getaverageflightseats.php';?>
 
-  <form action="/average_seats.php" style="text-align: center;" class="average_seats" >
+  <form action="get_average_flight_seats.php" style="text-align: center;" class="average_seats" >
     <label for="search" class="search-descriptors">Select a day: </label>
     <select id="days" name="days">
         <!-- <?php
@@ -54,7 +54,7 @@
         <option value="Saturday" <?php if($_GET["days"]=="Saturday") echo 'selected="selected"'; ?>>Saturday</option>
         <option value="Sunday" <?php if($_GET["days"]=="Sunday") echo 'selected="selected"'; ?>>Sunday</option>
     </select>
-    <button type="submit" class="search-submit " method="get" style="text-align: center;" >
+    <button type="submit" class="search-submit" method="get" style="text-align: center;" >
       <i class="material-icons">calculate</i>
       Calculate
        <i class="material-icons">calculate</i>

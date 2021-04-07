@@ -6,15 +6,16 @@
                     $result = $connection->query(<<<EOD
                         SELECT
                             Flight.AirlineCode,
-                            Flight.ThreeDigitNumber,
-                            AirplaneType.MaxSeats,
-                            DayOffered.DayValue
+                            Flight.FlightNumber,
+                            AirplaneType.AirplaneTypeMaxNumberOfSeats,
+                            FlightDays.FlightDayOffered
                         FROM
                             Flight
-                        JOIN DayOffered ON Flight.AirlineCode = DayOffered.AirlineCode AND Flight.ThreeDigitNumber = DayOffered.ThreeDigitNumber
-                        JOIN Airplane ON Flight.AirplaneId = Airplane.AirplaneId
+                        JOIN FlightDays ON Flight.AirlineCode = FlightDays.AirlineCode AND Flight.FlightNumber = FlightDays.FlightNumber
+                        JOIN Airplane ON Flight.AirplaneID = Airplane.AirplaneID
                         JOIN AirplaneType ON AirplaneType.AirplaneTypeName = Airplane.AirplaneTypeName
-                        WHERE DayOffered.DayValue="$day"
+                        WHERE
+                            FlightDays.FlightDayOffered="$day"
                     EOD);
                     $sum = 0;
                     $count = 0;
