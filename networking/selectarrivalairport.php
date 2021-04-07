@@ -12,6 +12,7 @@ $savedAirport = $_GET["arrivalAirport"];
           EOD;
         } else {
             echo <<<EOD
+
               <input type="radio" id="$airportCode" name="arrivalAirport" value="$airportCode">
               <label for="$airportCode" >$airportName ($airportCode)</label><br>
           EOD;

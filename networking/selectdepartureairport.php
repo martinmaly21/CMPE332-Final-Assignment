@@ -7,13 +7,13 @@ $savedAirport = $_GET["departureAirport"];
         $airportName = $row["AirportName"];
            if ((empty($savedAirport) && $airportCount == 0) || $airportCode == $savedAirport) {
                 echo <<<EOD
-                <input type="radio" id="$airportCode" name="departureAirport" value="$airportCode" CHECKED>
-                <label for="$airportCode" >$airportName ($airportCode)</label><br>
+                <input type="radio" id="departure$airportCode" name="departureAirport" value="$airportCode" CHECKED>
+                <label for="departure$airportCode" >$airportName ($airportCode)</label><br>
             EOD;
             } else {
                 echo <<<EOD
-                <input type="radio" id="$airportCode" name="departureAirport" value="$airportCode">
-                <label for="$airportCode" >$airportName ($airportCode)</label><br>
+                <input type="radio" id="departure$airportCode" name="departureAirport" value="$airportCode">
+                <label for="departure$airportCode" >$airportName ($airportCode)</label><br>
             EOD;
             }
             $airportCount++;
