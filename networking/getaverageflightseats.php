@@ -21,7 +21,7 @@
                     $count = 0;
                     while ($row = $result->fetch()) {
                         echo "<br />";
-                        $sum = $sum + $row["MaxSeats"];
+                        $sum = $sum + $row["AirplaneTypeMaxNumberOfSeats"];
                         $count = $count + 1;
                     }
                     if ($count == 0) {
