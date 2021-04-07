@@ -10,11 +10,11 @@ echo "<h4>";
         try {
             $result = $connection->query(<<<EOD
                 UPDATE
-                    DepartsFrom
+                    Flight
                 SET
                     ActualDepartureTime = "$time"
                 WHERE
-                    AirlineCode = "$code" AND ThreeDigitNumber = "$number"
+                    AirlineCode = "$code" AND FlightNumber = "$number"
             EOD);
             echo "Flight updated!";
         } catch (PDOException $e) {
