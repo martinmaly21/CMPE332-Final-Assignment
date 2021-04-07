@@ -18,7 +18,7 @@ echo "<h4>";
             EOD);
             echo "Flight updated!";
         } catch (PDOException $e) {
-            echo "Could not update flight. Please try again.";
+            echo "Could not update flight. Please enter a valid time.";
         }
     }
 echo "</h4>";
