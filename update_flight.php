@@ -47,7 +47,7 @@
                     <th></th>
                     <th>Airline |</th>
                     <th>Flight Code |</th>
-                    <th>Current Departure Time</th>
+                    <th>Actual Departure Time</th>
                 </tr>
 
             <?php include 'networking/getselectableflights.php';?>
