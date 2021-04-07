@@ -44,11 +44,10 @@
             <h2>Select a Flight </h2>
             <table id="data">
                 <tr>
-                    <th>Select</th>
-                    <th>Airline</th>
-                    <th>Flight Code</th>
+                    <th></th>
+                    <th>Airline |</th>
+                    <th>Flight Code |</th>
                     <th>Current Departure Time</th>
-                    <th>Actual Departure Time</th>
                 </tr>
 
             <?php include 'networking/getselectableflights.php';?>
