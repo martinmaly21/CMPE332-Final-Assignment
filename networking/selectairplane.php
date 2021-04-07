@@ -4,10 +4,10 @@ if (empty($code)) {
     echo "No airline selected. Select an airline then click the arrow.";
 } else {
     $savedPlane = $_GET["airplane"];
-    $airplanes = $connection->query("SELECT AirplaneId, AirplaneTypeName FROM Airplane WHERE AirlineCode='$code'");
+    $airplanes = $connection->query("SELECT AirplaneID, AirplaneTypeName FROM Airplane WHERE AirlineCode='$code'");
     $airplaneCount = 0;
     while ($row = $airplanes->fetch()) {
-        $airplaneId = $row["AirplaneId"];
+        $airplaneId = $row["AirplaneID"];
         $airplaneTypeName = $row["AirplaneTypeName"];
         if ((empty($savedPlane) && $airplaneCount == 0) || $airplaneId == $savedPlane) {
              echo <<<EOD
@@ -16,7 +16,7 @@ if (empty($code)) {
             EOD;
         } else {
             echo <<<EOD
-            <input type="radio" id="$airplaneId" name="airline" value="$airplaneId" />
+            <input type="radio" id="$airplaneId" name="airplane" value="$airplaneId" />
             <label for="$airplaneId" >$airplaneTypeName ($airplaneId)</label><br>
             EOD;
         }
