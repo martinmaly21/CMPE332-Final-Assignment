@@ -47,27 +47,21 @@
                     $departureTime = $_GET["departureTime"];
 
                     $flightSuccess = $connection->query(<<<EOD
-                        INSERT INTO Flight VALUES ("$flight_number", "$airline", "$airplane");
-                    EOD);
-                    $departSuccess = $connection->query(<<<EOD
-                        INSERT INTO DepartsFrom VALUES ("$airline", "$flight_number", "$departure", "$departureTime", null);
-                    EOD);
-                    $arrivalSuccess = $connection->query(<<<EOD
-                        INSERT INTO ArrivesAt VALUES ("$airline", "$flight_number", "$arrival", "$arrivalTime", null);
+                        INSERT INTO Flight VALUES ("$airplane", "$arrival", "$arrivalTime", null, "$departure", "$departureTime", null, "$flight_number", "$airline");
                     EOD);
 
                     $days = $_GET["DaysOffered"];
                     $daySuccess = true;
                     foreach ($days as $key => $n) {
                         $temp = $connection->query(<<<EOD
-                            INSERT INTO DayOffered VALUES ("$airline", "$flight_number", "$n");
+                            INSERT INTO FlightDays VALUES ("$n", "$flight_number", "$airline");
                         EOD);
                         if (!$temp) {
                             $daySuccess = $temp;
                         }
                     }
 
-                    if ($flightSuccess && $daySuccess && $arrivalSuccess && $departSuccess) {
+                    if ($flightSuccess && $daySuccess) {
                         echo " and our flight was created";
                     }
                 } catch (PDOException $e) {
