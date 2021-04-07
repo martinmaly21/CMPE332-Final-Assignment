@@ -64,10 +64,10 @@
       </div>
 
       <div class="spacer_between">
-            <h2>Schedule your arrival time</h2>
-            <?php include 'networking/schedulearrivaltime.php';?>
             <h2>Schedule your departure time</h2>
             <?php include 'networking/scheduleddeparturetime.php';?>
+            <h2>Schedule your arrival time</h2>
+            <?php include 'networking/schedulearrivaltime.php';?>
       </div>
       <div class="spacer_between">
         <h2>Choose the day(s) you'd like to depart</h2>
