@@ -9,10 +9,11 @@
     $savedFlightInfo = $_GET["flightInfo"];
     while ($row = $result->fetch()) {
         $airlineCode = $row["AirlineCode"];
-        $flightNumber = $row["ThreeDigitNumber"];
+        $flightNumber = $row["FlightNumber"];
         $combined = "$airlineCode $flightNumber";
         // echo $combined;
-        $time = empty($row["ActualDepartureTime"]) ? "Did not depart" : $row["ActualDepartureTime"];
+        $expectedDepartureTime = empty($row["ExpectedDepartureTime"]) ? "N/A" : $row["ExpectedDepartureTime"];
+        $actualDepartureTime = empty($row["ActualDepartureTime"]) ? "Did not depart" : $row["ActualDepartureTime"];
         echo "<tr>";
         if (($flightCount == 0 && empty($savedFlightInfo)) || $savedFlightInfo == $combined) {
             echo <<<EOD
@@ -24,9 +25,9 @@
             EOD;
         }
         echo "<td>".$row["AirlineCode"]."</td>";
-        echo "<td>".$row["ThreeDigitNumber"]."</td>";
-        echo "<td>".$row["ScheduledDepartureTime"]."</td>";
-        echo "<td>".$time."</td>";
+        echo "<td>".$row["FlightNumber"]."</td>";
+        echo "<td>".$expectedDepartureTime."</td>";
+        echo "<td>".$actualDepartureTime."</td>";
         echo "</tr>";
         $flightCount ++;
     }
