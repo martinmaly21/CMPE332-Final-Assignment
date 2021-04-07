@@ -4,11 +4,14 @@ $result = $connection->query($query);
 $numberOfFlights = 0;
 
 while ($row = $result->fetch()) {
+
+$arrivalTime = empty($row["ActualArrivalTime"]) ? "N/A" : $row["ActualArrivalTime"];
+
     echo "<tr>";
     echo "<td>".$row["AirlineCode"]."</td>";
     echo "<td>".$row["FlightNumber"]."</td>";
     echo "<td>".$row["ExpectedArrivalTime"]."</td>";
-    echo "<td>".$row["ActualArrivalTime"]."</td>";
+    echo "<td>".$arrivalTime."</td>";
     echo "</tr>";
     $numberOfFlights ++;
 }
