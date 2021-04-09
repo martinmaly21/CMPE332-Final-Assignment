@@ -38,7 +38,7 @@
   <div class="main_view">
     <?php include 'networking/connectdb.php';?>
 
-    <h1>Airline Assignment</h1>
+    <h1>Airline Assignment - Martin Maly (20068784)</h1>
     <h2>Available Flights</h2>
     <table id="airlinedata">
       <tr>
