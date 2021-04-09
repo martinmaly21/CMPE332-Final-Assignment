@@ -43,7 +43,7 @@
             <h2>Select a Flight </h2>
             <div class="display_flex jc_space_between">
                 <h2>Enter a time</h2>
-                <input id="search" class="update_flight_time" type="text" name="departureTime" placeholder="Type here">
+                <input id="search" class="update_flight_time" type="text" name="departureTime" placeholder="YYYY-MM-DD HH:MM:SS">
                 <button type="submit" class="search-submit add_flight_submit" class="btn btn-success" method="get">
                     Update Flight
                 </button>

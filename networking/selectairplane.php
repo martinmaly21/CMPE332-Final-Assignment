@@ -1,7 +1,7 @@
 <?php
 $code = $_GET["airline"];
 if (empty($code)) {
-    echo "No airline selected. Select an airline then click the arrow.";
+    echo "No airline selected.";
 } else {
     $savedPlane = $_GET["airplane"];
     $airplanes = $connection->query("SELECT AirplaneID, AirplaneTypeName FROM Airplane WHERE AirlineCode='$code'");
