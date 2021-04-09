@@ -1,6 +1,6 @@
 <?php
                 if (empty($_GET["days"])) {
-                    echo "Please select a day";
+                    echo "Please select a day:";
                 } else {
                     $day = $_GET["days"];
                     $result = $connection->query(<<<EOD
@@ -29,6 +29,6 @@
                     } else {
                         $average = $sum / $count;
                     }
-                    echo "<div style='text-align: center;'>The average number of seats per flight on $day is $average </div>";
+                    echo "<div style='text-align: left;'>The average number of seats per flight on $day is $average. </div>";
                 }
             ?>

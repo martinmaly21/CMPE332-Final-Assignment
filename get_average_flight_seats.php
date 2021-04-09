@@ -8,6 +8,7 @@
   <title>Get Average Flight Seats</title>
   <!-- Custom stylesheet -->
   <link rel="stylesheet" href="css/side_bar.css">
+  <link rel="stylesheet" href="css/main.css">
 </head>
 
 </body>
@@ -37,11 +38,11 @@
   <?php include 'networking/connectdb.php';?>
 
   <h1>Get Average Flight Seats</h1>
+  <h3>This will display the average number of seats available on all flight that day</h3>
 
   <?php include 'networking/getaverageflightseats.php';?>
 
-  <form action="get_average_flight_seats.php" style="text-align: center;" class="average_seats" >
-    <label for="search" class="search-descriptors">Select a day: </label>
+  <form action="get_average_flight_seats.php" style="text-align: left;" class="average_seats" >
     <select id="days" name="days">
         <!-- <?php
            if ($_GET["days"])
@@ -55,9 +56,7 @@
         <option value="Sunday" <?php if($_GET["days"]=="Sunday") echo 'selected="selected"'; ?>>Sunday</option>
     </select>
     <button type="submit" class="search-submit" method="get" style="text-align: center;" >
-      <i class="material-icons">calculate</i>
       Calculate
-       <i class="material-icons">calculate</i>
     </button>
   </form>
 

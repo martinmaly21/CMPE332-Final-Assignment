@@ -1,5 +1,5 @@
 <?php
-echo "<h4>";
+echo "<h3>";
         if (empty($_GET["airlinecode"]) || strlen($_GET["airlinecode"]) != 2) {
             echo "Search for a flight by entering a valid airline code and choosing a day.";
         } else {
@@ -50,4 +50,4 @@ echo "<h4>";
                 echo "</table>";
             }
         }
-echo "</h4>";
+echo "</h3>";

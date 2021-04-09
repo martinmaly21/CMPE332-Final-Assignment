@@ -1,5 +1,5 @@
 <?php
-echo "<h4>";
+echo "<h3>";
     if (empty($_GET["flightInfo"]) || empty($_GET["departureTime"])) {
         echo "Please fill out the form. You need to select a flight and enter a valid departure time";
     } else {
@@ -21,4 +21,4 @@ echo "<h4>";
             echo "Could not update flight. Please enter a valid time.";
         }
     }
-echo "</h4>";
+echo "</h3>";

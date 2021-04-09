@@ -40,8 +40,15 @@
   <h1>Update Flight</h1>
   <form action="update_flight.php" class="update_flight">
             <?php include 'networking/updateflight.php';?>
-
             <h2>Select a Flight </h2>
+            <div class="display_flex jc_space_between">
+                <h2>Enter a time</h2>
+                <input id="search" class="update_flight_time" type="text" name="departureTime" placeholder="Type here">
+                <button type="submit" class="search-submit add_flight_submit" class="btn btn-success" method="get">
+                    Update Flight
+                </button>
+            </div>
+
             <table id="data">
                 <tr>
                     <th></th>
@@ -51,14 +58,6 @@
                 </tr>
 
             <?php include 'networking/getselectableflights.php';?>
-
-            <div class="display_flex jc_space_between">
-                <h2>Enter a time</h2>
-                <input id="search" class="update_flight_time" type="text" name="departureTime" placeholder="Type here">
-                <button type="submit" class="search-submit add_flight_submit" class="btn btn-success" method="get">
-                    Update Flight
-                </button>
-            </div>
         </form>
 </div>
 
