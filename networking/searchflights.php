@@ -28,9 +28,9 @@ echo "<h3>";
             } else {
                 echo "<table id='data'>
                             <tr>
-                            <th>Airline</th>
-                            <th>Flight Code</th>
-                            <th>Departing Airport Location</th>
+                            <th>Airline |</th>
+                            <th>Flight Code |</th>
+                            <th>Departing Airport Location |</th>
                             <th>Arriving Airport Location</th>
                         </tr>";
                 echo "<tr>";
